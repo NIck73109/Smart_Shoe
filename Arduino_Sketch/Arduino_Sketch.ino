@@ -23,7 +23,8 @@ void setup()
     i++; 
   }
 }
-void loop(){
+void loop()
+{
   currentMillis = millis();
   if (currentMillis - previousMillis > samplingInterval)
   {
@@ -45,7 +46,7 @@ void loop(){
     SensorValue[3] = analogRead(ANALOG_IN_PIN3)/4;
     Serial.write(4); // Used to identify sensor 1
     Serial.write(SensorValue[3]);
-   
+  
   }
   delay(1000); // Delay in miliseconds, adjust to 10 after testing
 }

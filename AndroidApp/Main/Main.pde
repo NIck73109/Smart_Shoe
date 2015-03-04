@@ -71,6 +71,7 @@ void setup(){
 byte[] inBuffer = new byte[2];
 
 void draw() {
+  background(color(247, 17, 244));
   if (USBport != null){
   while (USBport.available() > 0 && USBenabled){
     
@@ -93,7 +94,6 @@ void draw() {
           sortData(tempInput,tempTime);
           // TODO: Save Report Data (Text to be redisplayed) or statistics for comparison          
       }
-
-  }
+    }
   }
 }
